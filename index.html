@@ -84,8 +84,8 @@
     <li>чат-боты, которые реально работают</li>
     <li>без перегруза, по шагам</li>
   </ul>
-  <p class="note">🏱 В закрепе — актуальные шаблоны и формулировки 👇</p>
-  <a href="https://t.me/vp_target" target="_blank" class="button" onclick="fbq('trackCustom', 'Click_TG_Channel_VN')">Перейти в Telegram</a>
+  <p class="note">🏡 В закрепе — актуальные шаблоны и формулировки 👇</p>
+  <a href="https://t.me/vp_target" target="_blank" class="button" onclick="fbq('track', 'Subscribe'); fbq('trackCustom', 'Click_TG_Channel_VN');">Перейти в Telegram</a>
 </div>
 
 <!-- Facebook Pixel Code -->
@@ -100,7 +100,11 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '3153750001397422');
   fbq('track', 'PageView');
-  fbq('trackCustom', 'PageView_TG_Channel_VN');
+
+  // кастомное событие для просмотра контента с таймером 7 сек
+  setTimeout(function() {
+    fbq('trackCustom', 'ViewContent_vn-tg_7s');
+  }, 7000);
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"/>
